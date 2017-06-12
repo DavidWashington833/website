@@ -1,0 +1,18 @@
+{
+    "name": "WebSite",
+    "version": "1.0.0",
+    "description": "Meu currículo na web, uma forma de mostrar um pouco de mim para o mercado de trabalho",
+    "devDependencies": {
+        "grunt": "1.0.1",
+        "grunt-contrib-cssmin": "2.0.0",
+        "grunt-contrib-htmlmin": "2.3.0",
+        "grunt-contrib-uglify": "2.2.0",
+        "grunt-image": "2.2.3",
+        "normalize.css": "5.0.0"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "David Washington",
+    "license": "MIT"
+}

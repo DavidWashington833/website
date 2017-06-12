@@ -1,0 +1,255 @@
+#menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    min-height: 80px;
+    padding-top: 15px;
+    .navbar {
+        padding-top: 8px;
+        a {
+            font-size: 16px;
+            margin-left: 20px;
+        }
+    }
+}
+
+#banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    .content {
+        min-width: 300px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+#skills h3 {
+    margin-bottom: 9px !important;
+}
+
+#about-me, #skills {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    .content {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.bgi-paulista {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url('../img/paulista.jpg') no-repeat center / cover;
+}
+
+.bgi-code {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url('../img/code.png') no-repeat center / cover;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+.bg-black-linear {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, $black, $black-5, $black);
+}
+
+.bg-black-linear-2 {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, $black-1, $black 50%);
+}
+
+.bg-black-linear-3 {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, $black-1, $black 50%);
+}
+
+.box-form {
+    max-width: 520px;
+    width: 100%;
+    margin: auto;
+}
+
+button[type="submit"] {
+    position: relative;
+    width: 100%;
+    background: #000;
+    color: #fff;
+    border: 2px solid #000;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 20px 0;
+    transition: $transition;
+    &:hover {
+        background: #fff;
+        color: #000;
+    }
+}
+
+@media only screen and (min-width : $ms) {
+    .navbar {
+        a {
+            margin-bottom: 20px;
+        }
+    }
+
+    .logo {
+        font-size: 22.5px;
+        line-height: 30px;
+    }
+
+    .sublogo {
+        font-size: 11px;
+        letter-spacing: 11.5px;
+    }
+
+    .collpase {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        top: 0px;
+        width: 0%;
+        background-color: $black-transparence;
+        .in {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 50% !important;
+            background: #eee;
+            padding-top: 80px;
+        }
+        a {
+            display: block;
+            color: $black;
+        }
+    }
+}
+
+@media only screen and (min-width : $mm) {
+    .logo {
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    .sublogo {
+        font-size: 11px;
+        letter-spacing: 13.5px;
+    }
+}
+
+@media only screen and (min-width : $ml) {
+
+}
+
+@media only screen and (min-width : $tb) {
+    .navbar {
+        a {
+            margin-bottom: 0px;
+        }
+    }
+
+    .toggle-collapse {
+        display: none;
+    }
+    
+    .collpase {
+        position: relative;
+        bottom: 0;
+        right: 0;
+        top: 10px;
+        width: auto;
+        background: none;
+        .in {
+            position: relative;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: auto !important;
+            background: none;
+            padding-top: 0px;
+        }
+        a {
+            display: inline;
+            color: $white;
+        }
+    }
+}
+
+@media only screen and (min-width : $lp) {
+}
+
+@media only screen and (min-width : $ll) {
+}
+
+footer {
+    min-height: 100px;
+    padding-top: 30px;  
+    img {
+        max-width: 25px;
+        margin: 0 10px;
+    }
+}
+
+#response {
+    margin-top: 10px;
+    min-height: 50px;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $black;
+  font-family: $lato;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $black;
+  font-family: $lato;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $black;
+  font-family: $lato;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: $black;
+  font-family: $lato;
+}
+
+.brand:hover, .brand:active, .brand:focus {
+    a {
+        color: $aqua;
+        transition: $transition;
+    }
+}

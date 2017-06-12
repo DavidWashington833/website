@@ -1,0 +1,26 @@
+@mixin defineColor($class, $color, $color-event) {
+    .c-#{$class} {
+        color: $color !important;
+    }
+    .c-#{$class}-event:hover, .c-#{$class}-event:active, .c-#{$class}-event:focus {
+        color: $color-event !important;
+    }
+    .bgc-#{$class} {
+        background-color: $color !important;
+    }
+    .bgc-#{$class}-event:hover, .bgc-#{$class}-event:active, .bgc-#{$class}-event:focus {
+        background-color: $color-event !important;
+    }
+    .bdc-#{$class} {
+        border-color: $color !important;
+    }
+    .bdc-#{$class}-event:hover, .bdc-#{$class}-event:active, .bdc-#{$class}-event:focus {
+        border-color: $color-event !important;
+    }
+}
+
+@include defineColor('white', $white, $white-event);
+@include defineColor('aqua', $aqua, $aqua-event);
+@include defineColor('black-transparence', $black-transparence, $black-transparence-event);
+@include defineColor('black', $black, $black-event);
+@include defineColor('grey', $grey, $grey-event);

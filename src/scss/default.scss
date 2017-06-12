@@ -1,0 +1,114 @@
+body {
+    font-family: $lato;
+    color: $white;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    * {
+        box-sizing: border-box;
+    }
+}
+
+section {
+    margin: 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+footer {
+    background: #55606A;
+    color: #fff;
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #99a4ae;
+}
+
+a {
+    color: $white;
+    &:hover, &:active, &:focus {
+        color: $aqua;
+        transition: $transition;
+    }
+    &:link {
+        text-decoration: none;
+    }
+}
+
+h1 {
+    margin: 0;
+}
+
+h3 {
+    font-size: 24px;    
+}
+
+p {
+    font-size: 18px;
+}
+
+li {
+    list-style: none;
+}
+
+input, select, textarea {
+    padding-left: 20px;
+    border: 2px solid #000;
+    width: 100%;
+    // height: 40px;
+    background: #fff;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    outline: 0 !important;
+    margin: 10px 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+textarea {
+    min-height: 100px;
+}
+
+@media only screen and (min-width : $ms) {
+    h1 {
+        font-size: 35px;
+    }
+
+    h2 {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width : $mm) {
+
+}
+
+@media only screen and (min-width : $ml) {
+
+}
+
+@media only screen and (min-width : $tb) {
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width : $lp) {
+}
+
+@media only screen and (min-width : $ll) {
+    h1 {
+        font-size: 70px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+}
