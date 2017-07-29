@@ -1,6 +1,6 @@
 <?php
-
-require_once("phpmailer/class.phpmailer.php");
+require_once ("phpmailer/class.phpmailer.php");
+require_once ("phpmailer/class.smtp.php");
 
 error_reporting(E_ALL);
 error_reporting(E_STRICT);
@@ -22,7 +22,7 @@ $Email->FromName = $name;
 $Email->AddAddress('davidwashington833@gmail.com');
 $Email->Subject = $subject;
 $Email->AddBcc('davidwashington833@gmail.com');
- 
+
 $body = "<html
 <body
 <table>
@@ -37,13 +37,13 @@ $body = "<html
 <tr>
 <td>Mensagem: <td> $message";
 
-$Email->MsgHTML($body); 
+$Email->MsgHTML($body);
 $Email->AltBody = 'Para conseguir essa e mail corretamente, u um visualizador de email com suporte a HTML';
 $Email->WordWrap = 50;
 
-if(!$Email->Send()) {
-    echo '<p>Desculpe, ocorreu um erro, por favor entrar em contato com <a href="mailto:davidwashington833@gmail.com" class="c-aqua c-aqua-event">davidwashington833@gmail.com</a>.</p>';
-} 
-else {
+if ($Email->Send()) {
     echo 'Obrigado por entrar em contato <img src="./img/ic_sentiment_very_satisfied_black_18px.svg"alt=":)">.';
+}
+else {
+    echo '<p>Desculpe, ocorreu um erro, por favor entrar em contato com <a href="mailto:davidwashington833@gmail.com" class="c-aqua c-aqua-event">davidwashington833@gmail.com</a>.</p>';
 }
