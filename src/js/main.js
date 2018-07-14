@@ -48,33 +48,6 @@ function collapsed()
     document.body.classList.remove( 'o-h' );
 }
 
-function sendFormContact( event )
-{
-    event.preventDefault();
-
-    var form = document.querySelector( 'form' );
-    var formData = new FormData( form );
-    var ajax = new XMLHttpRequest();
-
-    ajax.addEventListener( 'readystatechange', function ( event )
-    {
-        if ( ajax.readyState == 4 && ajax.status == 200 ) 
-        {
-            document.getElementById( 'response' ).innerHTML = ajax.response;
-
-            var inputs = $( '#form-contato > input, #form-contato > textarea' );
-
-            for ( var i = 0; i < inputs.length; i++ )
-            {
-                inputs[ i ].value = '';
-            }
-        }
-    } );
-
-    ajax.open( 'POST', 'sendmail.php', true );
-    ajax.send( formData );
-}
-
 function scrollSmooth( event )
 {
     event.preventDefault();
@@ -123,8 +96,6 @@ window.addEventListener( 'load', function ( event )
     {
         ancor[ i ].addEventListener( 'click', collapsed );
     }
-
-    document.getElementById( 'form-contato' ).addEventListener( 'submit', sendFormContact );
 
     var ancor = $( 'a[href*="#"]' );
 
